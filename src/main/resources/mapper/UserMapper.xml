@@ -21,10 +21,10 @@ namespace -> com.mynotes.mapper.UserMapper
 <mapper namespace="com.mynotes.mapper.UserMapper">
 
     <!--1. insert new user-->
-    <select id="insert" resultType="com.mynotes.model.entity.User">
-        INSERT INTO users (account, username, password, email,)
+    <insert id="insert" keyProperty="userId" useGeneratedKeys="true">
+        INSERT INTO users (account, username, password, email)
         VALUES (#{account}, #{username}, #{password}, #{email})
-    </select>
+    </insert>
 
     <!--    2. find by email-->
     <select id="findByEmail" resultType="com.mynotes.model.entity.User">
@@ -32,12 +32,12 @@ namespace -> com.mynotes.mapper.UserMapper
     </select>
 
 <!--    3. find by userId-->
-    <select id="findById" resultType="com.mynotes.model.entity.">
+    <select id="findById" resultType="com.mynotes.model.entity.User">
         SELECT * FROM users WHERE userId = #{userId}
     </select>
 
 <!--    4. find by account(set by user)-->
-    <select id="findByAccount" resultType="com.mynotes.model.entity.">
+    <select id="findByAccount" resultType="com.mynotes.model.entity.User">
         SELECT * FROM users WHERE account = #{account}
     </select>
 

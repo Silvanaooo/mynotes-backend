@@ -6,24 +6,26 @@ package com.mynotes.model.vo.user;
  */
 
 public class RegisterVO {
-    private Long userID;
+    private Long userId;
 
     @Override
     public String toString() {
         return "RegisterVO{" +
-                "userID=" + userID +
+                "userID=" + userId +
                 '}';
     }
 
-    public Long getUserID() {
-        return userID;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUserID(Long userID) {
-        this.userID = userID;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public RegisterVO(Long userID) {
-        this.userID = userID;
+    public RegisterVO(Long userId) {
+        this.userId = userId;
     }
+
+    public RegisterVO() {}
 }

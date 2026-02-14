@@ -25,5 +25,19 @@ public class ApiResponseUtil {
         return ApiResponse.error(400, message);
     }
 
+    /**
+     * error
+     */
+    public static <T> ApiResponse<T> serverError(String message){
+        return ApiResponse.error(500, message);
+    }
+
+    /**
+     * conflict, resouce exists already
+     */
+    public static <T> ApiResponse<T> conflict(String message){
+        return ApiResponse.error(409, message);
+    }
+
 
 }
