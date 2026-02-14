@@ -6,7 +6,7 @@ import com.mynotes.model.vo.user.RegisterVO;
 
 public interface UserService {
     /**
-     * registration
+     * user registration
      *
      * @param request
      * @return

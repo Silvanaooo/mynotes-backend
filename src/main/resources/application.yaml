@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mynotes?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Australia/Sydney
+    username: root
+    password: lian346877
+
+# mybatis rules
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # mapper path, where to load mapper XML files
+  configuration:
+    map-underscore-to-camel-case: true # underscore to camelCase mapping
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # print executed SQL to console
+  type-aliases-package: com.kama.notes.entity.custom # short names for java classes in XML
+  type-handlers-package: com.kama.notes.typehandler # custom TypeHandler

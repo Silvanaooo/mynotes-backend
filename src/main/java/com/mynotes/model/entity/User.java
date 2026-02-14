@@ -44,12 +44,12 @@ public class User {
     /**
      * create time
      */
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
     /**
      * update time
      */
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 
     /**
      * last login time
@@ -97,19 +97,19 @@ public class User {
     }
 
     public LocalDateTime getCreateAt() {
-        return createAt;
+        return createdAt;
     }
 
     public void setCreateAt(LocalDateTime createAt) {
-        this.createAt = createAt;
+        this.createdAt = createAt;
     }
 
     public LocalDateTime getUpdateAt() {
-        return updateAt;
+        return updatedAt;
     }
 
     public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
+        this.updatedAt = updateAt;
     }
 
     public LocalDateTime getLastLoginAt() {
@@ -127,8 +127,8 @@ public class User {
                 ", account='" + account + '\'' +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
-                ", createAt=" + createAt +
-                ", updateAt=" + updateAt +
+                ", createAt=" + createdAt +
+                ", updateAt=" + updatedAt +
                 ", lastLoginAt=" + lastLoginAt +
                 '}';
     }

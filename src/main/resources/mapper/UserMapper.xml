@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+1. namespace: equal full-qualified name (package + class) of the corresponding java mapper interface.
+java interface -> package: com.mynotes.mapper; public interface UserMapper
+namespace -> com.mynotes.mapper.UserMapper
+
+2. Each SQL statement id (e.g. <select id="findById">) matches the method name in the Java interface.
+
+<mapper namespace="com.mynotes.mapper.UserMapper">
+    (SQL Statements....)
+</mapper>
+
+-->
+
+<!-- -->
+
+<mapper namespace="com.mynotes.mapper.UserMapper">
+
+    <!--1. insert new user-->
+    <select id="insert" resultType="com.mynotes.model.entity.User">
+        INSERT INTO users (account, username, password, email,)
+        VALUES (#{account}, #{username}, #{password}, #{email})
+    </select>
+
+    <!--    2. find by email-->
+    <select id="findByEmail" resultType="com.mynotes.model.entity.User">
+        SELECT * FROM users WHERE email = #{email}
+    </select>
+
+<!--    3. find by userId-->
+    <select id="findById" resultType="com.mynotes.model.entity.">
+        SELECT * FROM users WHERE userId = #{userId}
+    </select>
+
+<!--    4. find by account(set by user)-->
+    <select id="findByAccount" resultType="com.mynotes.model.entity.">
+        SELECT * FROM users WHERE account = #{account}
+    </select>
+
+</mapper>
